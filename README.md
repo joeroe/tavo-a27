@@ -1,7 +1,7 @@
 
 # Uerpmann 1987, *The Ancient Distribution of Ungulate Mammals in the Middle East*, TAVO A27
 
-![](README_files/figure-gfm/sites-all-1.png)<!-- -->
+<img src="README_files/figure-gfm/sites-all-1.png" width="100%" style="display: block; margin: auto;" />
 
 This repository contains data from Uerpmann’s (1987), *[The Ancient
 Distribution of Ungulate Mammals in the Middle
