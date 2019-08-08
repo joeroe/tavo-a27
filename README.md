@@ -1,6 +1,8 @@
 
 # Uerpmann 1987, *The Ancient Distribution of Ungulate Mammals in the Middle East*, TAVO A27
 
+[![DOI](https://zenodo.org/badge/201043108.svg)](https://zenodo.org/badge/latestdoi/201043108)
+
 <img src="README_files/figure-gfm/sites-all-1.png" width="100%" style="display: block; margin: auto;" />
 
 This repository contains data from Uerpmann’s (1987), *[The Ancient
@@ -152,9 +154,16 @@ approximately ±1 km.
 
 Please cite Uerpmann’s original volume when using this data:
 
-  - Uerpmann, Hans Peter. 1987. *The Ancient Distribution of Ungulate
+  - Hans Peter Uerpmann. (1987). *The Ancient Distribution of Ungulate
     Mammals in the Middle East*. Tübinger Atlas des Vorderen Orients
     (TAVO), Reihe A (Naturwissenschaften), Nr. 27. Wiesbaden: Dr. Ludwig
     Reichert Verlag.
+
+You can also cite this specific dataset via
+[Zenodo](https://doi.org/10.5281/zenodo.3362928):
+
+  - Joe Roe. (2019). *Data from Uerpmann 1987, The Ancient Distribution
+    of Ungulate Mammals in the Middle East, TAVO A27* (Version v1.0)
+    \[Data set\]. Zenodo. <http://doi.org/10.5281/zenodo.3362929>
 
 Further references for specific assemblages are provided in the data.
