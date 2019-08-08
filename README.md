@@ -130,8 +130,8 @@ approximately ±1 km.
 ### Taxonomy
 
   - Uerpmann’s various notation for indeterminate species
-    (e.g. “cf. *Oryx*,”*Capra* spec.“,”*Hippotraginae* indet.") are
-    standardised to the form *Genus sp.*
+    (e.g. “cf. *Oryx*”, “*Capra* spec.”, “*Hippotraginae* indet.”)
+    are standardised to the form *Genus sp.*
   - All the taxa listed are included; Uerpmann’s commentary on the
     certainty of identification (e.g. “(?)”, “cf.”) is ignored.
   - Taxa not identified to at least the genus (e.g. “large Bovidae”) are
