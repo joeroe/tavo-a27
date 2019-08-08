@@ -16,6 +16,69 @@ biogeography in Southwest Asia. Here, the catalogue included in the
 volume has been transcribed into a structured format suitable for modern
 computerised data analysis.
 
+## Usage
+
+The data is provided in a
+[tidy](http://vita.had.co.nz/papers/tidy-data.html), tabular format in
+[tavo-a27.tsv](tavo-a27.tsv) (tab-seperated) and
+[tavo-a27.csv](tavo-a27.csv) (comma-seperated). Column headings are
+given in the first row. The occurrence data is coded as a series of
+boolean columns, where `1` indicates the presence of a taxon at a site
+and `0` its absence.
+
+Below is a simple example of how to import and visualise the data in R.
+
+``` r
+library("tidyverse")
+library("sf")
+library("rnaturalearth")
+
+tavo <- read_tsv("tavo-a27.tsv", col_types = cols())
+
+# Reshape data into a table of occurrences
+tavo %>% 
+  gather("taxon", "occurrence", 9:79) %>% 
+  filter(occurrence == 1) ->
+  tavo
+
+# Recode and filter to selected taxa of interest
+tavo %>% 
+  mutate(taxon = case_when(
+    grepl("Gazella*", taxon) ~ "Gazella",
+    grepl("Equus*", taxon) ~ "Equus",
+    grepl("Dama*", taxon) ~ "Dama",
+    grepl("Ovis*", taxon) ~ "Ovicaprid",
+    grepl("Capra*", taxon) ~ "Ovicaprid",
+    grepl("Bos*", taxon) ~ "Bos",
+    grepl("Sus*", taxon) ~ "Sus",
+  )) %>% 
+  filter(taxon %in% c("Gazella", "Equus", "Dama", "Ovicaprid", "Bos", "Sus")) ->
+  tavo
+
+# Convert to simple features spatial object
+tavo %>% 
+  drop_na(latitude, longitude) %>% 
+  st_as_sf(crs = 4326, coords = c("longitude", "latitude"), remove = FALSE,
+           agr = "constant") %>% 
+  st_transform(crs = 22770) -> # EPSG:22770 / Syria Lambert
+  tavo
+
+# Plot
+box <- st_bbox(tavo)
+land <- ne_download(110, "land", "physical", returnclass = "sf") %>% 
+  st_crop(xmin = 0, xmax = 90, ymin = 0, ymax = 60) %>% 
+  st_transform(crs = 22770)
+
+ggplot(tavo) +
+  facet_wrap(vars(taxon)) +
+  geom_sf(data = land, fill = "white") +
+  geom_sf() +
+  coord_sf(xlim = c(box$xmin, box$xmax), ylim = c(box$ymin, box$ymax),
+           label_axes = "----")
+```
+
+<img src="README_files/figure-gfm/R-example-1.png" width="100%" style="display: block; margin: auto;" />
+
 ## Transcription notes
 
 Generally, the data has been transcribed from the published volume with
