@@ -123,8 +123,9 @@ site names, dating, taxonomy, etc., to reflect subsequent research.
 The locations of the sites are indicated on maps throughout Uerpmann’s
 volume, but exact coordinates are not given in the text or catalogue.
 The coordinates included in this dataset have therefore been compiled
-from various other sources, with references provided in the
-`coord_source` column. They can be assumed to be accurate to within
+from various other sources, with citations provided in the
+`coord_source` column. See `tavo-a27.bib` for the full references in
+BibTex format. They can be assumed to be accurate to within
 approximately ±1 km.
 
 ### Taxonomy
@@ -139,8 +140,9 @@ approximately ±1 km.
 
 ### Bibliographic references
 
-  - Citations are given in the data following Uerpmann; consult his
-    bibliography for full references.
+Full references are provided in BibTex format in `tavo-a27.bib`.
+
+  - Citations are given in the data following Uerpmann
   - As noted by Uerpmann, he references “usually only the last (and/or
     key-) publication concerning the respective site”.
   - References to other authors marked “ms.”, “unpub.”, etc. are
@@ -166,4 +168,6 @@ You can also cite this specific dataset via
     of Ungulate Mammals in the Middle East, TAVO A27* (Version v1.0)
     \[Data set\]. Zenodo. <http://doi.org/10.5281/zenodo.3362929>
 
-Further references for specific assemblages are provided in the data.
+Further citations for specific assemblages are provided in the
+`fauna_source` and `coord_source` columns. See `tavo-a27.bib` for the
+full references in BibTex format.
