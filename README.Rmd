@@ -117,7 +117,7 @@ No attempt has been made to update or standardise the site names, dating, taxono
   * **BA**: Bronze Age
   * **LN**: Late Neolithic
   * **EN**: Early Neolithic
-  * **PN**: Protoneolithic (i.e. the Pre-Pottery Neolithic)
+  * **PN**: Protoneolithic (i.e. the Natufian and contemporary cultures and PPNA)
   * **EP**: Epipalaelithic
   * **UP**: Upper Palaeolithic
   * **MP**: Middle Palaeolithic
